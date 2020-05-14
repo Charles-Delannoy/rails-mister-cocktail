@@ -1,0 +1,22 @@
+<div class="background">
+  <div class="cocktail-title-show" style="background-image: url(<%= @cocktail.picture_url %>)">
+  <h1><%= @cocktail.name %></h1>
+  </div>
+  <div class="container">
+    <div class="d-flex align-items-center">
+      <h2>Recipes</h2>
+      <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+    </div>
+    <ul>
+      <%= "<li>No ingredient yet!</li>".html_safe if @doses.empty? %>
+      <% @doses.each do |dose| %>
+      <li>
+        <strong><%= Ingredient.find(dose.ingredient_id).name %>:</strong> <%= dose.description %>
+        <%= link_to "delete", dose_path(dose),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="background">
+  <div class="container">
+    <h1>Cocktails</h1>
+
+    <ul class="cocktails-list">
+      <% @cocktails.each do |cocktail| %>
+      <li class="cocktail-card" style="background-image: url(<%= cocktail.picture_url %>)">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
