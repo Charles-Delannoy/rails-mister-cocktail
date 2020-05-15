@@ -1,0 +1,27 @@
+a.my-btn {
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+    padding: 10px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+a.my-btn-empty {
+  color: #77685D;
+  border: 1px solid #77685D;
+  &:hover {
+    border: 1px solid #473D3F;
+    color: #473D3F;
+    box-shadow: 0px 0px 47px -19px rgba(0,0,0,0.75);
+  }
+}
+
+a.my-btn-blue {
+  color: white;
+  background-color: #078ED9;
+  &:hover {
+  background-color: #066396;
+  }
+}

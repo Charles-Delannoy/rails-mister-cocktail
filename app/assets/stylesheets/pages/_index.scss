@@ -1,2 +1,21 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "cocktail_show";
+
+.cocktails-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.form-container {
+  color: black;
+  text-shadow: none;
+  margin: auto;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 60px;
+  border-radius: 10px;
+}
