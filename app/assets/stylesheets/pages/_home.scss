@@ -3,6 +3,9 @@
   height: 100vh;
   text-align: center;
   background-image: image-url('background.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   a {
     margin-top: 40vh;
@@ -49,7 +52,9 @@
 }
 
 .container {
+  height: 90vh;
   padding-top: 40px;
+  overflow-y: scroll;
 }
 
 .form-container {
