@@ -1,4 +1,13 @@
 // Specific CSS for your home-page
+.home-banner {
+  height: 100vh;
+  text-align: center;
+  background-image: url('../../assets/images/background.jpg');
+  a {
+    margin-top: 40vh;
+  }
+}
+
 .cocktails-list {
   list-style: none;
   display: flex;
@@ -11,15 +20,14 @@
   width: 350px;
   height: 200px;
   border: 1px solid #EEEEEE;
-  margin-bottom: 20px;
-  background-size: 100%;
-  background-position: cover;
+  margin-bottom: 40px;
+  background-size: cover;
+  background-position: center;
   color: white;
   font-size: 20px;
+  padding: 10px;
   a {
     color: white;
-    margin: 10px;
-    height: 100%;
     text-shadow: 1px 1px 2px black;
   }
 }
