@@ -1,5 +1,5 @@
 <div class="background">
-  <div class="cocktail-title-show" style="background-image: url(<%= @cocktail.picture_url %>)">
+  <div class="cocktail-title-show" style="background-image: url(<%= cl_image_path(@cocktail.photo.key) %>)">
   <h1><%= @cocktail.name %></h1>
   </div>
   <div class="container">

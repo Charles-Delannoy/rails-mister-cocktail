@@ -24,7 +24,10 @@ url_cocktail = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktai
 
 cocktails = JSON.parse(open(url_cocktail).read)
 cocktails['drinks'].each do |cocktail|
-  @cocktail = Cocktail.create(name: cocktail['strDrink'], picture_url: cocktail['strDrinkThumb'])
+  img = URI.open(cocktail['strDrinkThumb'])
+  @cocktail = Cocktail.new(name: cocktail['strDrink'])
+  @cocktail.photo.attach(io: img, filename: "#{cocktail['strDrink']}.png", content_type: 'image/png')
+  @cocktail.save
 
   url_doses = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=#{cocktail['idDrink']}"
 
