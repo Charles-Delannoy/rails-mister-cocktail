@@ -1,5 +1,5 @@
 <div class="background">
-  <div class="container">
+  <div class="my-container">
     <h1>Cocktails</h1>
 
     <ul class="cocktails-list">
@@ -8,7 +8,7 @@
       <% if cocktail.photo.attached? %>
         <li class="cocktail-card" style="background-image: url(<%= cl_image_path(cocktail.photo.key) %>)">
       <% else %>
-        <li class="cocktail-card">
+        <li class="cocktail-card" style="background-color: rgba(163,154,146,0.7)">
       <% end %>
       <%= cocktail.name %>
       </li>
