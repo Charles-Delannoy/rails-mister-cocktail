@@ -4,7 +4,7 @@
       <% if @cocktail.photo.attached? %>
         <div class="cocktail-title-show" style="background-image: url(<%= cl_image_path(@cocktail.photo.key) %>)">
       <% else %>
-        <div class="cocktail-title-show" style="background-color: rgba(163,154,146,0.7)">
+        <div class="cocktail-title-show" style="background-image: url(<%= cl_image_path('michael-oeser-nfj1gzws7HM-unsplash_sj2vgq') %>)">
       <% end %>
       <h1><%= @cocktail.name %></h1>
       </div>

@@ -8,7 +8,7 @@
       <% if cocktail.photo.attached? %>
         <li class="cocktail-card" style="background-image: url(<%= cl_image_path(cocktail.photo.key) %>)">
       <% else %>
-        <li class="cocktail-card" style="background-color: rgba(163,154,146,0.7)">
+        <li class="cocktail-card" style="background-image: url(<%= cl_image_path('michael-oeser-nfj1gzws7HM-unsplash_sj2vgq') %>)">
       <% end %>
       <p><%= cocktail.name %></p>
       </li>
