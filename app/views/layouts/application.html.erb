@@ -14,15 +14,18 @@
 
   <body>
     <nav class="my-navbar">
-      <%= link_to image_tag("logo-mc.png", size: "200x100"), cocktails_path, class: "branding" %>
-       <div class="navbar-menu">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <%= link_to "Create a cocktail", new_cocktail_path, class: "my-btn my-btn-empty" %>
-            </li>
-          </ul>
-          </form>
-        </div>
+      <%= link_to image_tag("logo-mc.png", size: "180x90"), cocktails_path, class: "branding" %>
+      <div class="navbar-menu">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <%= link_to "Create a cocktail", new_cocktail_path, class: "my-btn my-btn-empty" %>
+          </li>
+        </ul>
+        <form class="search-navbar" action="/cocktails">
+          <input class="search-input" name="cocktail" type="text">
+          <input class="search-btn" type="submit" value="Search">
+        </form>
+      </div>
     </nav>
 
     <%= yield %>

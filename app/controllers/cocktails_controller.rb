@@ -3,7 +3,8 @@ class CocktailsController < ApplicationController
   end
 
   def index
-    @cocktails = Cocktail.order(:name)
+    cocktails = Cocktail.arel_table
+    @cocktails = Cocktail.where(cocktails[:name].matches("%#{params['cocktail']}")).order(:name)
   end
 
   def show
@@ -26,3 +27,4 @@ class CocktailsController < ApplicationController
     params.require(:cocktail).permit(:name, :picture_url, :photo)
   end
 end
+

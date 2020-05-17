@@ -26,13 +26,38 @@
   padding: 10px 5px;
 }
 
-.navbar-list {
+ul.navbar-list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  margin-bottom: 0;
 }
 
 .navbar-menu {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  width: 100%;
+
+}
+
+.search-navbar {
+  display: flex;
+  margin-bottom: 2px;
+  height: 40px;
+}
+
+.search-btn {
+  border-radius: 5px;
+  background-color: #77685D;
+  color: white;
+  margin-left: 10px;
+}
+
+.search-input {
+  border-radius: 5px;
+  border: 1px solid #77685D;
+  color: #77685D;
 }
