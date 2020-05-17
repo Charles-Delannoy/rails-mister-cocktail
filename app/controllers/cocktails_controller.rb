@@ -4,7 +4,7 @@ class CocktailsController < ApplicationController
 
   def index
     cocktails = Cocktail.arel_table
-    @cocktails = Cocktail.where(cocktails[:name].matches("%#{params['cocktail']}")).order(:name)
+    @cocktails = Cocktail.where(cocktails[:name].matches("%#{params['cocktail']}%")).order(:name)
   end
 
   def show
