@@ -4,13 +4,13 @@
 
     <ul class="cocktails-list">
       <% @cocktails.each do |cocktail| %>
-      <%= link_to cocktail_path(cocktail), class: 'card-link' do%>
+      <%= link_to cocktail_path(cocktail), class: 'cocktail-card-link' do%>
       <% if cocktail.photo.attached? %>
         <li class="cocktail-card" style="background-image: url(<%= cl_image_path(cocktail.photo.key) %>)">
       <% else %>
         <li class="cocktail-card" style="background-color: rgba(163,154,146,0.7)">
       <% end %>
-      <%= cocktail.name %>
+      <p><%= cocktail.name %></p>
       </li>
       <% end %>
       <% end %>
