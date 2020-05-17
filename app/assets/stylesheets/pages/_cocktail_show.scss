@@ -17,9 +17,38 @@
 
 .cocktail-info {
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
-  padding: 60px;
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
   color: white;
   flex-grow: 1;
 }
 
+.cocktail-details {
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+  border-bottom: 1px solid white;
+}
+
+.doses {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  a {
+    text-align: center;
+  }
+  ul {
+    margin-top: 30px;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+  }
+}
