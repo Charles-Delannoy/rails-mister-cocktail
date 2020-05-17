@@ -25,3 +25,11 @@ a.my-btn-blue {
   background-color: #066396;
   }
 }
+
+a.my-btn-brown {
+  color: white;
+  background-color: #77685D;
+  &:hover {
+  background-color: #473D3F;
+  }
+}

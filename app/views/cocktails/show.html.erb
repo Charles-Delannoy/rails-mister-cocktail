@@ -13,18 +13,32 @@
           <h2>Recipe</h2>
         </div>
         <div class="doses">
-        <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "my-btn-blue my-btn" %>
-        <ul>
-          <%= "<li>No ingredient yet!</li>".html_safe if @doses.empty? %>
+        <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "my-btn-brown my-btn" %>
+        <table>
+          <tr>
+            <th>Ingredients</th>
+            <th>Doses</th>
+            <th></th>
+          </tr>
+          <% if @doses.empty? %>
+          <tr>
+            <td>No ingredient yet!</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <% else %>
           <% @doses.each do |dose| %>
-          <li>
-            <p><strong><%= Ingredient.find(dose.ingredient_id).name %>:</strong></p><p><%= dose.description %></p>
-            <%= link_to "delete", dose_path(dose),
-                    method: :delete,
-                    data: { confirm: "Are you sure?" } %>
-          </li>
+          <tr>
+            <td><strong><%= Ingredient.find(dose.ingredient_id).name %></strong></td>
+            <td><%= dose.description %></td>
+            <td class="action"><%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: "my-btn my-btn-blue"%></td>
+          </tr>
           <% end %>
-        </ul>
+          <% end %>
+        </table>
+        </div>
+        <div class="cocktail-info-footer">
+          <%= link_to "Back to list", cocktails_path, class: "my-btn my-btn-brown"%>
         </div>
       </div>
     </div>

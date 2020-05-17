@@ -14,12 +14,9 @@
 
   <body>
     <nav class="my-navbar">
-      <%= link_to image_tag("logo-mc.png", size: "200x100"), root_path, class: "branding" %>
+      <%= link_to image_tag("logo-mc.png", size: "200x100"), cocktails_path, class: "branding" %>
        <div class="navbar-menu">
           <ul class="navbar-list">
-            <li class="navbar-item">
-              <%= link_to "Cocktail\' list", cocktails_path, class: "my-btn my-btn-empty"%>
-            </li>
             <li class="navbar-item">
               <%= link_to "Create a cocktail", new_cocktail_path, class: "my-btn my-btn-empty" %>
             </li>
