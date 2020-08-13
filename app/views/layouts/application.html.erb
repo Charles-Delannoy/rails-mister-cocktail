@@ -13,7 +13,12 @@
   </head>
 
   <body>
-    <div class="my-navbar">
+    <% unless current_page?('/') %>
+      <% navbar = "my-navbar" %>
+    <% else %>
+      <% navbar = "my-home-navbar" %>
+    <% end %>
+    <div class=<%= navbar %>>
       <%= link_to image_tag("logo-mc.png", size: "180x90"), root_path, class: "branding" %>
       <div class="navbar-menu">
         <ul class="navbar-list">

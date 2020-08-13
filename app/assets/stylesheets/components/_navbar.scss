@@ -24,6 +24,21 @@
   width: 100vw;
 }
 
+.my-home-navbar {
+  background-color: rgba(244, 235, 217, 0.6);
+  display: flex;
+  border-bottom: 1px solid #77685D;
+
+  box-shadow: 0px 9px 19px -11px rgba(0,0,0,0.75);
+  height: 11vh;
+  position: fixed;
+  width: 100vw;
+}
+
+.navbar-white {
+  background-color: #F4EBD9;
+}
+
 .navbar-item {
   padding: 10px 5px;
 }
