@@ -32,3 +32,36 @@
   height: 80vh;
   border-radius: 10px;
 }
+
+
+// Description card
+
+.description-card {
+  border-radius: 5px;
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #F4EBD9;
+  p {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+  img {
+    border-radius: 5px 0px 0px 5px;
+    height: 250px;
+    width: 300px;
+    object-fit: cover;
+  }
+}
+
+.website-description {
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
+  margin: 0px 70px;
+}
