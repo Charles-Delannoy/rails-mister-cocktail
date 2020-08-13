@@ -20,9 +20,10 @@
 
 
 .my-container {
-  height: 89vh;
+  height: 100vh;
   overflow-y: scroll;
   padding: 40px;
+  padding-top: 12vh;
   > h1 {
     text-align: center;
     color: white;
