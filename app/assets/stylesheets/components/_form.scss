@@ -1,9 +1,16 @@
 .form-container {
   color: black;
   text-shadow: none;
-  margin: auto;
+  margin: 0 auto;
   width: 600px;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 60px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 680px)
+{
+  .form-container {
+    max-width: 300px;
+  }
 }
