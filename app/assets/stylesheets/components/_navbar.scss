@@ -60,7 +60,13 @@ ul.navbar-list {
   margin-right: 20px;
   width: 100%;
   flex-wrap: wrap;
+  a {
+    text-align: center;
+  }
+}
 
+.navbar-item {
+  padding: 10px 0px;
 }
 
 .search-navbar {
@@ -70,21 +76,35 @@ ul.navbar-list {
 }
 
 .search-btn {
-  border-radius: 5px;
+  border-radius: 0px 5px 5px 0px;
   background-color: #77685D;
   color: white;
-  margin-left: 10px;
+  border: 1px;
 }
 
 .search-input {
   border-radius: 5px;
   border: 1px solid #77685D;
   color: #77685D;
+  border-radius: 5px 0px 0px 5px;
+  flex-grow: 1;
 }
 
 @media screen and (max-width: 680px)
 {
   .branding img {
     display: none
+  }
+
+  .my-navbar {
+    height: 10vh;
+  }
+  .navbar-menu {
+    margin-bottom: 5px;
+    a, .search-navbar {
+    width: 100%;
+    height: 3.5vh;
+    line-height: 1vh;
+    }
   }
 }
