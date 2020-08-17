@@ -33,3 +33,40 @@ a.my-btn-brown {
   background-color: #473D3F;
   }
 }
+
+.search-btn {
+  border-radius: 0px 5px 5px 0px;
+  background-color: #77685D;
+  color: white;
+  border: 1px;
+  &:hover {
+    background-color: #423933;
+  }
+  }
+
+.back-btn {
+  font-size: 25px;
+  height: 25px;
+  position: relative;
+  i {
+      position: relative;
+      top: 0;
+   }
+}
+
+.my-navbar .back-btn, .my-home-navbar .back-btn{
+  position: absolute;
+  right: 20px;
+  color: #77685D;
+  &:hover {
+    color: #423933;
+  }
+}
+
+@media screen and (max-width: 680px)  {
+.my-navbar .back-btn, .my-home-navbar .back-btn {
+  left: 20px;
+  top: 6vw;
+}
+
+}

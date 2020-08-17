@@ -27,6 +27,16 @@
           <input class="search-btn" type="submit" value="Search">
         </form>
       </div>
+      <% unless current_page?('/') %>
+        <% if current_page?(controller:'cocktails', action:'index') %>
+          <% link = root_path %>
+        <% elsif current_page?(controller:'cocktails', action:'show', id: (@cocktail.id || Cocktail.all.last.id)) %>
+          <% link = cocktails_path %>
+        <% end %>
+        <%= link_to link, class: "back-btn" do %>
+          <i class="fas fa-chevron-circle-left"></i>
+        <% end %>
+      <% end %>
     </div>
 
     <%= yield %>

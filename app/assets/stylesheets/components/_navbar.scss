@@ -75,13 +75,6 @@ ul.navbar-list {
   height: 40px;
 }
 
-.search-btn {
-  border-radius: 0px 5px 5px 0px;
-  background-color: #77685D;
-  color: white;
-  border: 1px;
-}
-
 .search-input {
   border-radius: 5px;
   border: 1px solid #77685D;
@@ -100,6 +93,7 @@ ul.navbar-list {
     height: 10vh;
   }
   .navbar-menu {
+    margin-left: 50px;
     margin-bottom: 5px;
     a, .search-navbar {
     width: 100%;
