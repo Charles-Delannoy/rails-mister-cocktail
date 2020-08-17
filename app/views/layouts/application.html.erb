@@ -27,10 +27,14 @@
           <input class="search-btn" type="submit" value="Search">
         </form>
       </div>
-      <% unless current_page?('/') %>
+      <% if current_page?('/') %>
+      <%= image_tag "logo-mc.png", size: "60x30", class: 'navbar-phone-img' %>
+      <% else %>
         <% if current_page?(controller:'cocktails', action:'index') %>
           <% link = root_path %>
-        <% elsif current_page?(controller:'cocktails', action:'show', id: (@cocktail.id || Cocktail.all.last.id)) %>
+        <% elsif current_page?(controller:'doses', action:'new', cocktail_id: (@cocktail.id || Cocktail.all.last.id)) %>
+          <% link = cocktail_path(@cocktail) %>
+        <% else %>
           <% link = cocktails_path %>
         <% end %>
         <%= link_to link, class: "back-btn" do %>

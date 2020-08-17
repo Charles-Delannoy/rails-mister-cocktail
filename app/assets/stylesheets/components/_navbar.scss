@@ -83,10 +83,20 @@ ul.navbar-list {
   flex-grow: 1;
 }
 
+ .navbar-phone-img{
+  display: none;
+ }
+
 @media screen and (max-width: 680px)
 {
   .branding img {
     display: none
+  }
+
+  .navbar-phone-img{
+    position: absolute;
+    top: 4vh;
+    display: block;
   }
 
   .my-navbar {
